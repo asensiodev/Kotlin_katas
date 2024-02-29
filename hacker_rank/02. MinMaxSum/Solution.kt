@@ -24,7 +24,6 @@ import kotlin.text.*
  */
 
 fun miniMaxSum(arr: Array<Int>): Unit {
-    arr.sort()
     val minValue = arr.min()
     val maxValue = arr.max()
 
