@@ -25,13 +25,12 @@ import kotlin.text.*
 
 fun miniMaxSum(arr: Array<Int>): Unit {
     arr.sort()
-    val firstItemIndex = 0
-    val lastItemIndex = (arr.size - 1)
+    val minValue = arr.min()
+    val maxValue = arr.max()
 
-    val minList = arr.filter { it != arr[lastItemIndex] }.toTypedArray()
-    val maxList = arr.filter { it != arr[firstItemIndex] }.toTypedArray()
+    val sum = arr.map { it.toLong() }.sum()
 
-    println("${minList.sum()} ${maxList.sum()}")
+    println("${sum - maxValue} ${sum - minValue}")
 }
 
 fun main(args: Array<String>) {
