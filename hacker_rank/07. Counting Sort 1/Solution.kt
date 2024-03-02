@@ -27,19 +27,11 @@ import kotlin.text.*
 fun countingSort(arr: Array<Int>): Array<Int> {
     var frequencyArr = Array<Int>(100) { 0 }
 
-    var occurrences: Int
     for (i in arr) {
-        occurrences = 0
-        for (j in arr) {
-            if (i == j) {
-                occurrences += 1
-                frequencyArr[i] = occurrences
-            }
-        }
+        frequencyArr[i] = frequencyArr[i] + 1
     } 
 
     return frequencyArr
-
 }
 
 fun main(args: Array<String>) {
