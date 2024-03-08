@@ -1,0 +1,1 @@
+Constructive algorithm to get the maximum sum in a n x n submatrix of a 2n x 2n matrix
